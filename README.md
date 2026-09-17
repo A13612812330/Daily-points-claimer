@@ -1,4 +1,19 @@
-# 每日积分领取
+# WorkBuddy / TraeWork 每日积分自动领取
+
+面向 Windows 的本地桌面自动化工具：在用户已登录 WorkBuddy 和 TraeWork 的前提下，按每日计划任务打开账户菜单并尝试领取每日积分。脚本使用本机 UI 点击，不保存账号密码、不绕过验证码，也不上传日志、截图或本机配置。
+
+## 项目内容
+
+- `setup.ps1`：生成当前电脑的 `config.json`，并创建 Windows 每日计划任务。
+- `daily-points.ps1`：执行 WorkBuddy 与 TraeWork 的每日领取流程。
+- `config.example.json`：软件路径和相对点击位置模板。
+- `CODEX_PROMPT.md`：把仓库交给 Codex 后可直接使用的部署提示。
+
+## 适用范围
+
+- 仅适用于 Windows、已安装并已登录的 WorkBuddy 与 TraeWork。
+- 需要用户保持已登录、桌面未锁定，并允许软件窗口被激活。
+- 由于不同版本、分辨率、缩放比例和弹窗可能影响定位，首次必须先执行演练并检查截图证据。
 
 `daily-points.ps1` 仅在当前 Windows 用户已登录、桌面未锁定、WorkBuddy 与 TraeWork 均保留登录态时使用。
 
